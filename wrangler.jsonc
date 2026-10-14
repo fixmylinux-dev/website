@@ -1,5 +1,7 @@
 {
   "name": "fixmylinux",
   "compatibility_date": "2026-10-01",
-  "assets": { "directory": "." }
+  "assets": { "directory": "." },
+  "workers_dev": false,
+  "preview_urls": false
 }
