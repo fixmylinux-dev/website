@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>fixmylinux</title>
+  <meta name="description" content="Fix your Linux in one command: codecs, video decoding, drivers and apps. Supported so far: Fedora.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/site.js" defer></script>
+</head>
+<body>
+  <svg class="sprite" aria-hidden="true">
+    <symbol id="icon-terminal" viewBox="0 0 24 24">
+      <rect x="2.5" y="4" width="19" height="16" rx="3"/>
+      <path d="M7 9.5l3 2.5-3 2.5M12.5 15h4.5"/>
+    </symbol>
+  </svg>
+
+  <div class="container">
+    <div class="hero">
+      <header class="site-header">
+        <a class="logo" href="/">
+          <img src="/favicon.svg" alt="" width="30" height="30">
+          fixmylinux
+        </a>
+      </header>
+
+      <main>
+        <h1>Fix your Linux in one command.</h1>
+        <p class="tagline">Codecs, video decoding, drivers and apps, sorted. Supported so far: <strong>Fedora</strong>.</p>
+
+        <div class="desktops">
+          <input type="radio" name="desktop" id="kde" value="kde" checked>
+          <input type="radio" name="desktop" id="gnome" value="gnome">
+          <input type="radio" name="desktop" id="terminal" value="terminal">
+
+          <div class="tabs" role="radiogroup" aria-label="Your desktop">
+            <label for="kde">KDE</label>
+            <label for="gnome">GNOME</label>
+            <label for="terminal"><svg class="icon" aria-hidden="true"><use href="#icon-terminal"/></svg>Terminal</label>
+          </div>
+
+          <section class="panel" id="panel-kde" aria-label="KDE instructions">
+            <p class="step-label"><b>1.</b> Copy this command</p>
+            <div class="command">
+              <pre id="command-kde">curl -fsSL https://fixmylinux.dev/setup.sh | bash</pre>
+              <button class="copy-button" type="button" data-copy="command-kde">Copy</button>
+            </div>
+
+            <ol class="shortcuts">
+              <li>
+                <span class="step-label"><b>2.</b> Open the launcher</span>
+                <span class="keys"><kbd>Alt</kbd>+<kbd>Space</kbd></span>
+                <span class="hint">or Alt + F2</span>
+              </li>
+              <li>
+                <span class="step-label"><b>3.</b> Paste</span>
+                <span class="keys"><kbd>Ctrl</kbd>+<kbd>V</kbd></span>
+              </li>
+              <li>
+                <span class="step-label"><b>4.</b> Run it in a terminal</span>
+                <span class="keys"><kbd>Shift</kbd>+<kbd>Enter</kbd></span>
+              </li>
+            </ol>
+
+            <p class="step-label password-step"><b>5.</b> Type your password when it asks, then press <kbd class="small">Enter</kbd>. You might see stars as you type, or nothing at all. Both are normal, so just keep typing.</p>
+
+            <div class="fallback">
+              <span><strong>Nothing happened when you pressed the keys?</strong> Use a terminal instead.</span>
+              <label class="button-outline" for="terminal"><svg class="icon" aria-hidden="true"><use href="#icon-terminal"/></svg>Show Terminal steps</label>
+            </div>
+          </section>
+
+          <section class="panel" id="panel-gnome" aria-label="GNOME instructions">
+            <p class="step-label"><b>1.</b> Copy this command</p>
+            <div class="command">
+              <pre id="command-gnome">ptyxis -- bash -c "curl -fsSL https://fixmylinux.dev/setup.sh | bash"</pre>
+              <button class="copy-button" type="button" data-copy="command-gnome">Copy</button>
+            </div>
+
+            <ol class="shortcuts">
+              <li>
+                <span class="step-label"><b>2.</b> Open the run box</span>
+                <span class="keys"><kbd>Alt</kbd>+<kbd>F2</kbd></span>
+              </li>
+              <li>
+                <span class="step-label"><b>3.</b> Paste</span>
+                <span class="keys"><kbd>Ctrl</kbd>+<kbd>V</kbd></span>
+              </li>
+              <li>
+                <span class="step-label"><b>4.</b> Open it in a terminal</span>
+                <span class="keys"><kbd>Enter</kbd></span>
+              </li>
+            </ol>
+
+            <p class="step-label password-step"><b>5.</b> Type your password when it asks, then press <kbd class="small">Enter</kbd>. You might see stars as you type, or nothing at all. Both are normal, so just keep typing.</p>
+
+            <div class="fallback">
+              <span><strong>Nothing happened when you pressed the keys?</strong> Use a terminal instead.</span>
+              <label class="button-outline" for="terminal"><svg class="icon" aria-hidden="true"><use href="#icon-terminal"/></svg>Show Terminal steps</label>
+            </div>
+          </section>
+
+          <section class="panel" id="panel-terminal" aria-label="Terminal instructions">
+            <p class="step-label"><b>1.</b> Copy this command</p>
+            <div class="command">
+              <pre id="command-terminal">curl -fsSL https://fixmylinux.dev/setup.sh | bash</pre>
+              <button class="copy-button" type="button" data-copy="command-terminal">Copy</button>
+            </div>
+
+            <ol class="shortcuts">
+              <li>
+                <span class="step-label"><b>2.</b> Open a terminal</span>
+                <span class="keys"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd></span>
+                <span class="hint">GNOME: press Super, type “terminal”, press Enter</span>
+              </li>
+              <li>
+                <span class="step-label"><b>3.</b> Paste</span>
+                <span class="keys"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd></span>
+              </li>
+              <li>
+                <span class="step-label"><b>4.</b> Run it</span>
+                <span class="keys"><kbd>Enter</kbd></span>
+              </li>
+            </ol>
+
+            <p class="step-label password-step"><b>5.</b> Type your password when it asks, then press <kbd class="small">Enter</kbd>. You might see stars as you type, or nothing at all. Both are normal, so just keep typing.</p>
+          </section>
+        </div>
+      </main>
+
+      <a class="scroll-down" href="#what-it-does" aria-label="Scroll to what it does">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9.5l6 6 6-6"/></svg>
+      </a>
+    </div>
+
+    <section class="features" id="what-it-does">
+      <h2>What it does</h2>
+      <ul class="feature-list">
+        <li>Updates your system</li>
+        <li>Adds the <a href="https://rpmfusion.org">RPM Fusion</a> repositories</li>
+        <li>Installs full multimedia codecs, so videos and music just play</li>
+        <li>Turns on hardware video decoding for AMD and Intel graphics</li>
+        <li>Adds Flathub to your app store for thousands more apps</li>
+      </ul>
+    </section>
+
+    <footer>
+      <nav>
+        <a href="https://github.com/fixmylinux-dev/fixmylinux">Script source</a>
+        <a href="https://github.com/fixmylinux-dev/website">Website source</a>
+        <span>MIT licence</span>
+      </nav>
+      <p>No cookies, no trackers, nothing loaded from other websites. Hosted by Cloudflare, which keeps standard server logs.</p>
+      <p>The script installs software from third-party repositories and comes with no warranty. You're responsible for following the laws where you live.</p>
+      <p>Not affiliated with Fedora, Red Hat, KDE or GNOME. Fedora is a trademark of Red Hat, Inc. KDE is a trademark of KDE e.V. GNOME is a trademark of the GNOME Foundation. Linux® is the registered trademark of Linus Torvalds in the U.S. and other countries.</p>
+    </footer>
+  </div>
+</body>
+</html>
