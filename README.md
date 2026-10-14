@@ -26,4 +26,3 @@ Issues and pull requests are welcome.
 ## Licence
 
 MIT. The "fixmylinux" name and logo are not covered by this licence and may not be used to imply endorsement or for forks without permission.
-Issues and pull requests are welcome.
